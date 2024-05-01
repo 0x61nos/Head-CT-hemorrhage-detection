@@ -151,3 +151,5 @@ def cnnModel(img_width, img_height, pathX, pathY):
         validation_steps=nb_validation_samples // batch_size)
 
     print("Final accuracy: " + str(model.evaluate(test_images[..., np.newaxis] / 255., test_labels)[1] * 100) + "%")
+    print("Saving the model")
+    model.save("model.keras")
