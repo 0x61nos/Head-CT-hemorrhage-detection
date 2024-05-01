@@ -3,11 +3,11 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from Cnn import cnnModel
-from .Classifiers.Adaboost import adaBoost
-from .Classifiers.Random_Forest import random_forest
-from .Classifiers.Svm import svmlinear, svmpoly, svmrbf, svmsigmoid
-from .Classifiers.DecisionTreeClassifier import decisionTreeClassifier
-from .Classifiers.Knn import knn, knnEMD
+from Classifiers.Adaboost import adaBoost
+from Classifiers.Random_Forest import random_forest
+from Classifiers.Svm import svmlinear, svmpoly, svmrbf, svmsigmoid
+from Classifiers.DecisionTreeClassifier import decisionTreeClassifier
+from Classifiers.Knn import knn, knnEMD
 import Extract as ex
 import numpy as np
 import glob
