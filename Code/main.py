@@ -54,7 +54,11 @@ if __name__ == '__main__':
     files = sorted(glob.glob(pathX))
     labels_df = pd.read_csv(pathY)
     labels = np.array(labels_df[' hemorrhage'].tolist())
-    images = np.array([cv2.imread(path, cv2.IMREAD_GRAYSCALE) for path in files])
+    #images = np.array([cv2.imread(path, cv2.IMREAD_GRAYSCALE) for path in files])
+    # Resize images
+    size = (100, 100)  # Define your desired size here
+    images = np.array([cv2.resize(cv2.imread(path, cv2.IMREAD_GRAYSCALE), size) for path in files])
+    
 
     # Run on variety of image size options:
     for s in range(20, 150, 10):
