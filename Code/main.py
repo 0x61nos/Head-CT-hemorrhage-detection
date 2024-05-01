@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
 from Cnn import cnnModel
 from Code.Classifiers.Adaboost import adaBoost
 from Code.Classifiers.Random_Forest import random_forest
